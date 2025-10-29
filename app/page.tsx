@@ -5,6 +5,7 @@ import { Post } from '@/lib/types';
 import PostCard from '@/components/PostCard';
 import TerminalPrompt from '@/components/TerminalPrompt';
 import TypingAnimation from '@/components/TypingAnimation';
+import NewsletterForm from '@/components/NewsletterForm';
 
 export const revalidate = 3600; // Revalidate every hour
 
@@ -87,6 +88,10 @@ export default async function Home() {
             </p>
           </div>
         )}
+      </section>
+
+      <section className="mt-16">
+        <NewsletterForm />
       </section>
     </div>
   );

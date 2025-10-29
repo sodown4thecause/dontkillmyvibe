@@ -4,6 +4,7 @@ import { Post, Category } from '@/lib/types';
 import PostCard from '@/components/PostCard';
 import TerminalPrompt from '@/components/TerminalPrompt';
 import Link from 'next/link';
+import NewsletterForm from '@/components/NewsletterForm';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -78,6 +79,10 @@ export default async function BlogPage() {
           </p>
         </div>
       )}
+
+      <section className="mt-16">
+        <NewsletterForm />
+      </section>
     </div>
   );
 }

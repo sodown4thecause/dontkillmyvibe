@@ -9,6 +9,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { Calendar, User, Clock, Tag } from 'lucide-react';
 import TableOfContents from '@/components/TableOfContents';
+import NewsletterForm from '@/components/NewsletterForm';
 
 export const revalidate = 3600;
 
@@ -176,8 +177,9 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         </article>
 
         {/* Sidebar */}
-        <aside className="lg:col-span-1">
+        <aside className="lg:col-span-1 space-y-6">
           {toc.length > 0 && <TableOfContents headings={toc} />}
+          <NewsletterForm />
         </aside>
       </div>
     </div>

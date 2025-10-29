@@ -15,11 +15,11 @@ export const revalidate = 3600;
 
 async function getPost(slug: string) {
   try {
-    const { data } = await client.query({
+    const { data } = await client.query<{ postBy: Post }>({
       query: GET_POST_BY_SLUG,
       variables: { slug },
     });
-    return data.postBy as Post | null;
+    return data?.postBy ?? null;
   } catch (error) {
     console.error('Error fetching post:', error);
     return null;
@@ -28,10 +28,10 @@ async function getPost(slug: string) {
 
 export async function generateStaticParams() {
   try {
-    const { data } = await client.query({
+    const { data } = await client.query<{ posts: { nodes: Post[] } }>({
       query: GET_ALL_POSTS,
     });
-    const posts = data.posts.nodes as Post[];
+    const posts = data?.posts?.nodes ?? [];
     
     return posts.map((post) => ({
       slug: post.slug,

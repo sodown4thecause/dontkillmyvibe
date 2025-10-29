@@ -16,7 +16,7 @@ export default function AboutPage() {
           About DontKillMyVibe.dev
         </h1>
 
-        <div className="space-y-6 text-terminal-white leading-relaxed">
+        <div className="space-y-6 text-[#e0e0e0] leading-relaxed">
           <section>
             <h2 className="text-2xl font-bold text-terminal-cyan mb-4 glow-text">
               <span className="text-terminal-amber">$</span> whoami
@@ -32,7 +32,7 @@ export default function AboutPage() {
             <h2 className="text-2xl font-bold text-terminal-cyan mb-4 glow-text">
               <span className="text-terminal-amber">$</span> cat mission.txt
             </h2>
-            <div className="border-l-4 border-terminal-green pl-6 space-y-4 text-terminal-white">
+            <div className="border-l-4 border-terminal-green pl-6 space-y-4 text-[#e0e0e0]">
               <p>
                 <span className="text-terminal-green font-bold">&gt;</span> Demystify AI development 
                 for developers at all levels
@@ -94,7 +94,7 @@ export default function AboutPage() {
             </h2>
             <div className="bg-terminal-bg-elevated p-6 border border-terminal-green/30 font-mono text-sm">
               <p className="text-terminal-green mb-2"># Don&apos;t Kill the Vibe</p>
-              <p className="text-terminal-white">
+              <p className="text-[#e0e0e0]">
                 In development, as in life, maintaining the right energy is crucial. 
                 This site is built on the principle that great code comes from a place 
                 of flow, curiosity, and genuine passion. Whether you&apos;re building AI 
@@ -107,7 +107,7 @@ export default function AboutPage() {
           <section className="border-t border-terminal-green/30 pt-6 mt-8">
             <p className="text-terminal-cyan font-mono">
               <span className="text-terminal-green">$</span> Ready to dive in? 
-              <a href="/blog" className="text-terminal-amber hover:text-terminal-white transition-colors ml-2">
+              <a href="/blog" className="text-terminal-amber hover:text-[#e0e0e0] transition-colors ml-2">
                 cd /blog
               </a>
             </p>

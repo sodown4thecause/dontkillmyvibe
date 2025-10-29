@@ -11,10 +11,18 @@ export const revalidate = 3600; // Revalidate every hour
 
 async function getPosts() {
   try {
-    const { data } = await client.query({
+    interface GetAllPostsData {
+      posts: {
+        nodes: Post[];
+      };
+    }
+    const { data } = await client.query<GetAllPostsData>({
       query: GET_ALL_POSTS,
       variables: { first: 6 },
     });
+    if (!data) {
+      return [];
+    }
     return data.posts.nodes as Post[];
   } catch (error) {
     console.error('Error fetching posts:', error);
@@ -34,7 +42,7 @@ export default async function Home() {
           <TypingAnimation text="DontKillMyVibe.dev" speed={80} />
         </div>
         
-        <div className="space-y-2 text-terminal-white font-mono">
+        <div className="space-y-2 text-[#e0e0e0] font-mono">
           <p className="text-lg">
             <span className="text-terminal-cyan">&gt;</span> Exploring AI Development
           </p>

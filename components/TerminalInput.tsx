@@ -36,7 +36,7 @@ export default function TerminalInput({
           onChange={(e) => setValue(e.target.value)}
           onKeyDown={handleKeyDown}
           placeholder={placeholder}
-          className="flex-1 bg-transparent text-terminal-white outline-none placeholder:text-terminal-gray cursor"
+          className="flex-1 bg-transparent text-[#e0e0e0] outline-none placeholder:text-terminal-gray cursor"
           autoFocus
         />
       </div>

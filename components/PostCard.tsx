@@ -64,7 +64,7 @@ export default function PostCard({ post }: PostCardProps) {
             </div>
           )}
 
-          <p className="text-terminal-white leading-relaxed line-clamp-3">
+          <p className="text-[#e0e0e0] leading-relaxed line-clamp-3">
             {excerpt}
           </p>
 

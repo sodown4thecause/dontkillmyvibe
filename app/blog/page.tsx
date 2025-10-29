@@ -16,10 +16,10 @@ export const revalidate = 3600;
 
 async function getPosts() {
   try {
-    const { data } = await client.query({
+    const { data } = await client.query<{ posts: { nodes: Post[] } }>({
       query: GET_ALL_POSTS,
     });
-    return data.posts.nodes as Post[];
+    return data?.posts?.nodes ?? [];
   } catch (error) {
     console.error('Error fetching posts:', error);
     return [];
@@ -28,10 +28,10 @@ async function getPosts() {
 
 async function getCategories() {
   try {
-    const { data } = await client.query({
+    const { data } = await client.query<{ categories: { nodes: Category[] } }>({
       query: GET_ALL_CATEGORIES,
     });
-    return data.categories.nodes as Category[];
+    return data?.categories?.nodes ?? [];
   } catch (error) {
     console.error('Error fetching categories:', error);
     return [];

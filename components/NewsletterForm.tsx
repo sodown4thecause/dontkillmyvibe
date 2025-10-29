@@ -65,7 +65,7 @@ export default function NewsletterForm() {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="your.email@example.com"
               disabled={status === 'loading' || status === 'success'}
-              className="w-full bg-terminal-bg border border-terminal-cyan/50 px-4 py-3 text-terminal-white placeholder:text-terminal-gray focus:outline-none focus:border-terminal-green focus:shadow-glow-green transition-all font-mono disabled:opacity-50"
+              className="w-full bg-terminal-bg border border-terminal-cyan/50 px-4 py-3 text-[#e0e0e0] placeholder:text-terminal-gray focus:outline-none focus:border-terminal-green focus:shadow-glow-green transition-all font-mono disabled:opacity-50"
             />
           </div>
           <button

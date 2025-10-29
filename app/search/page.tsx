@@ -21,11 +21,11 @@ export default function SearchPage() {
     setSearched(true);
 
     try {
-      const { data } = await client.query({
+      const { data } = await client.query<{ posts: { nodes: Post[] } }>({
         query: SEARCH_POSTS,
         variables: { search: searchQuery },
       });
-      setResults(data.posts.nodes as Post[]);
+      setResults(data?.posts?.nodes || []);
     } catch (error) {
       console.error('Error searching posts:', error);
       setResults([]);

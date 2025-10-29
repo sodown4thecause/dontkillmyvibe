@@ -10,7 +10,7 @@ export const revalidate = 3600;
 
 async function getCategoryPosts(slug: string) {
   try {
-    const { data } = await client.query({
+    const { data }: { data: any } = await client.query({
       query: GET_POSTS_BY_CATEGORY,
       variables: { slug },
     });
@@ -26,7 +26,7 @@ async function getCategoryPosts(slug: string) {
 
 export async function generateStaticParams() {
   try {
-    const { data } = await client.query({
+    const { data }: { data: any } = await client.query({
       query: GET_ALL_CATEGORIES,
     });
     const categories = data.categories.nodes;

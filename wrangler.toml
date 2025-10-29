@@ -1,0 +1,6 @@
+name = "vibe-stack"
+compatibility_date = "2025-01-29"
+
+[assets]
+directory = "out"
+binding = "ASSETS"
